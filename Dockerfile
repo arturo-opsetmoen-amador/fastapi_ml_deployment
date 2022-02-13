@@ -11,8 +11,9 @@ COPY ./requirements.txt ./requirements.txt
 RUN python -m pip install --upgrade pip
 RUN python -m pip install -r requirements.txt
 
-ENV PYTHONPATH "${PYTHONPATH}:/clean_churn/tests:/clean_churn:"
+# ENV PYTHONPATH "${PYTHONPATH}:/clean_churn/tests:/clean_churn:"
 
-WORKDIR /clean_churn
+# WORKDIR /clean_churn
+WORKDIR /home/arturo_docker/
 ENTRYPOINT ["bash"]
 CMD ["run.sh"]
