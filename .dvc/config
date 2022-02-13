@@ -1,0 +1,6 @@
+[core]
+    remote = local_remote
+['remote "local_remote"']
+    url = ../data
+['remote "s3_remote"']
+    url = s3://arturo-o-amador-fastapi-ml-deployment/data
