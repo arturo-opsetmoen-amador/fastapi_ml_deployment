@@ -1,0 +1,7 @@
+# Basic workflow to build a python app. Template taken from default GitHub actions.
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
