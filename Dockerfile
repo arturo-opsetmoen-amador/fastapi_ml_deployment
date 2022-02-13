@@ -11,8 +11,15 @@ COPY ./requirements.txt ./requirements.txt
 RUN python -m pip install --upgrade pip
 RUN python -m pip install -r requirements.txt
 
-# ENV PYTHONPATH "${PYTHONPATH}:/clean_churn/tests:/clean_churn:"
+WORKDIR /home/arturo_docker/
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/home/arturo_docker/awscliv2.zip"
+RUN unzip awscliv2.zip
+USER root
+RUN  ./aws/install
+RUN rm -rf aws awscliv2.zip
+USER arturo_docker
 
+# ENV PYTHONPATH "${PYTHONPATH}:/clean_churn/tests:/clean_churn:"
 # WORKDIR /clean_churn
 WORKDIR /home/arturo_docker/
 ENTRYPOINT ["bash"]
