@@ -49,13 +49,13 @@ def get_best_params(X_train, y_train, cv,
         'colsample_bylevel': Real(0.01, 1.0, 'uniform'),
         'reg_alpha': Real(1e-9, 1.0, 'log-uniform'),
         'gamma': Real(1e-9, 0.5, 'log-uniform'),
-        'n_estimators': Integer(100, 1000),
+        'n_estimators': Integer(100, 750),
         }
 
     classifier = BayesSearchCV(
         xgboost,
         search_spaces,
-        n_iter=1024,
+        n_iter=4096,
         cv=cv
     )
 
