@@ -33,6 +33,7 @@ RUN unzip awscliv2.zip
 USER root
 RUN  ./aws/install
 RUN rm -rf aws awscliv2.zip
+RUN curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
 USER arturo_docker
 
 # ENV PYTHONPATH "${PYTHONPATH}:/clean_churn/tests:/clean_churn:"
