@@ -3,7 +3,7 @@ Add doc string # TODO: Add doc string
 """
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 from sklearn.ensemble import GradientBoostingClassifier
-
+import logging
 from sklearn.pipeline import Pipeline
 from skopt import BayesSearchCV
 from skopt.callbacks import DeadlineStopper, DeltaYStopper
@@ -12,7 +12,36 @@ import xgboost as xgb
 from datetime import datetime
 from typing import *
 from pathlib import Path
-import pickle
+import joblib
+
+FORMAT = '%(asctime)s %(clientip)-15s %(user)-8s %(message)s'
+formatter = logging.Formatter(FORMAT)
+
+
+def logger(name: str, log_file: str, level:logging.INFO=logging.INFO) -> logging.Logger:
+    """
+
+    Parameters
+    ----------
+    name
+    log_file
+    level
+
+    Returns
+    -------
+
+    """
+    handler = logging.FileHandler(log_file)
+    handler.setFormatter(formatter)
+
+    logger = logging.getLogger(name)
+    logger.setLevel(level)
+    logger.addHandler(handler)
+
+    return logger
+
+
+params_log = logger('params_log', 'params_log.txt')
 
 
 def get_best_params(X_train, y_train, cv,
@@ -64,11 +93,9 @@ def get_best_params(X_train, y_train, cv,
     classifier.fit(X_train, y_train, callback=callbacks)
 
     best_params = classifier.best_params_
-    print('Best parameters:')
-    print(best_params)
-
-    with open(filepath, 'wb') as file:
-        pickle.dump(best_params, file)
+    params_log.info('Best parameters: ')
+    params_log.info(f"{best_params}")
+    joblib.dump(best_params, filepath)
 
     return best_params
 
@@ -97,8 +124,8 @@ def train_xgb(X_train, y_train, best_params, filepath: Union[
 
     xgboost.fit(X_train, y_train)
 
-    with open(filepath, 'wb') as file:
-        pickle.dump(xgboost, file)
+    # with open(filepath, 'wb') as file:
+    #     pickle.dump(xgboost, file)
 
     return xgboost
 
