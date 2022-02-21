@@ -31,7 +31,7 @@ def get_best_params(X_train, y_train, cv,
         Params dictionary
     """
     overdone_control = DeltaYStopper(delta=0.0001)
-    time_limit_control = DeadlineStopper(total_time=60 * 10)
+    time_limit_control = DeadlineStopper(total_time=60 * 45)
     callbacks = [overdone_control, time_limit_control
                  ]
     xgboost = xgb.XGBClassifier(n_jobs=-1,
@@ -42,14 +42,16 @@ def get_best_params(X_train, y_train, cv,
     search_spaces = {
         'learning_rate': Real(0.01, 1.0, 'log-uniform'),
         'min_child_weight': Integer(0, 10),
-        'max_depth': Integer(0, 31),
+        'max_depth': Integer(0, 100),
         'max_delta_step': Integer(0, 20),
         'subsample': Real(0.01, 1.0, 'uniform'),
-        'colsample_bytree': Real(0.01, 1.0, 'uniform'),
-        'colsample_bylevel': Real(0.01, 1.0, 'uniform'),
+        'colsample_bytree': Real(0.01, 1.0, 'log-uniform'),
+        'colsample_bylevel': Real(0.01, 1.0, 'log-uniform'),
+        'reg_lambda': Real(1e-9, 1000, 'log-uniform'),
         'reg_alpha': Real(1e-9, 1.0, 'log-uniform'),
         'gamma': Real(1e-9, 0.5, 'log-uniform'),
-        'n_estimators': Integer(100, 750),
+        'n_estimators': Integer(400, 1000),
+        'scale_pos_weight': Real(1e-6, 500, 'log-uniform')
         }
 
     classifier = BayesSearchCV(
