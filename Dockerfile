@@ -37,6 +37,9 @@ RUN curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
 USER arturo_docker
 USER root
 RUN apt-get install git -y
+RUN rm /Python-3.10.0.tgz
+RUN rm -rf /Python-3.10.0
+
 USER arturo_docker
 # ENV PYTHONPATH "${PYTHONPATH}:/clean_churn/tests:/clean_churn:"
 # WORKDIR /clean_churn
