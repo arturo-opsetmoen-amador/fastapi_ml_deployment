@@ -1,0 +1,6 @@
+*.txt
+*.md
+/tests
+/eda
+/data/census.csv
+*html
