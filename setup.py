@@ -13,6 +13,7 @@ setuptools.setup(
         "fastapi==0.73.0",
         "uvicorn==0.17.4",
         "gunicorn==20.1.0",
+        "scikit-optimize[plots]==0.9.0",
         "xgboost==1.5.2"
         ]
 )
