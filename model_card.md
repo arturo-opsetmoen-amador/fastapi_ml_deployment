@@ -39,7 +39,16 @@ best parameters.
 trained with the full (80% of the dataset) training set. 
 
 ## Metrics
-Please include the metrics used and your model's performance on those metrics._
+Stratified k-fold x-validation with a K = 10 used to (Bayes) search 
+the space of the best parameters for the XGBoost model. The metrics
+obtained on the hold-out set were as followed: 
+
+* Test xgb_Precision: 0.71847739888977
+* Test xgb_Recall: 0.6031957390146472
+* Test xgb_FBeta: 0.6558089033659066
+
+The best paremeter dictionary after Bayes search is recorded in the 
+```best_params.pkl``` file under models/.
 
 ## Ethical Considerations
 

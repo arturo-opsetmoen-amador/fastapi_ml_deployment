@@ -2,5 +2,3 @@
     remote = s3_remote
 ['remote "s3_remote"']
     url = s3://arturo-o-amador-fastapi-ml-deployment
-['remote "s3_remote_data"']
-    url = s3://arturo-o-amador-fastapi-ml-deployment/data
