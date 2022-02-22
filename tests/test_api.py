@@ -1,22 +1,32 @@
 import pytest
 from fastapi.testclient import TestClient
-from ..fastAPI_main import app
+from main import app
 import json
 
-def test_positive_example(data_positive_API):#, compare_output):#, app):
-    with TestClient(app) as client:
-            r = client.post("/predict", data=json.dumps(data_positive_API),
-                            headers={"Content-Type": "application/json"})
-            assert r.json()["predictions"] == "1", "Unexpected output of the model"
 
-def test_negative_example(data_negative_API):#, compare_output):#, app):
+def test_api_locally_get_root():
     with TestClient(app) as client:
-            r = client.post("/predict", data=json.dumps(data_negative_API),
-                            headers={"Content-Type": "application/json"})
-            assert r.json()["predictions"] == "0", "Unexpected output of the model"
+        r = client.get('/')
+        assert r.status_code == 200, "Status code is not 200"
+        assert r.json()["Welcome"] == "Welcome to the salary XGBoost predictor web service.", "Wrong json output"
 
-def test_response_code(data_positive_API):
+
+def test_positive(positive_ex):
     with TestClient(app) as client:
-            r = client.post("/predict", data=json.dumps(data_positive_API),
-                            headers={"Content-Type": "application/json"})
-            assert r.status_code == 200
+        r = client.post("/predict", data=json.dumps(positive_ex),
+                        headers={"Content-Type": "application/json"})
+        assert r.json()["Salary"] == "1", "Unexpected output of the model"
+
+
+def test_negative(negative_ex):
+    with TestClient(app) as client:
+        r = client.post("/predict", data=json.dumps(negative_ex),
+                        headers={"Content-Type": "application/json"})
+        assert r.json()["Salary"] == "0", "Unexpected output of the model"
+
+
+def test_response(positive_ex):
+    with TestClient(app) as client:
+        r = client.post("/predict", data=json.dumps(positive_ex),
+                        headers={"Content-Type": "application/json"})
+        assert r.status_code == 200

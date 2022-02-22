@@ -11,9 +11,13 @@ from pydantic import BaseModel, Field
 from typing import *
 import pandas as pd
 import joblib
-import sys
-sys.path.insert(1, './ml_training/ml')
-import model, data
+import uvicorn
+# import sys
+from fastapi.testclient import TestClient
+import json
+# sys.path.insert(1, 'ml_training/ml')
+from ml_training.ml import data, model
+
 
 # from ml_training.ml.model import *
 # from ml_training.ml.data import *
@@ -24,11 +28,12 @@ if "DYNO" in os.environ and os.path.isdir(".dvc"):
         exit("dvc pull failed")
     os.system("rm -r .dvc .apt/usr/lib/dvc")
 
+
 app = FastAPI(
     title="API for classification of salaries based on census data.",
     description="Prediction interface for XGBoost model",
     version="0.1.0"
-    )
+)
 
 
 class XGBoostInput(BaseModel):
@@ -45,8 +50,8 @@ class XGBoostInput(BaseModel):
         "Self-emp-inc",
         "Without-pay",
         "Never-worked"
-        ] = Field(..., example="Private")
-    fnlgt: int = Field(..., example=71211)
+    ] = Field(..., example="Private")
+    #     fnlgt: int = Field(..., example=71211)
     education: Literal[
         "Bachelors",
         "HS-grad",
@@ -64,8 +69,8 @@ class XGBoostInput(BaseModel):
         "Preschool",
         "12th",
         "1st-4th"
-        ] = Field(..., example="Doctorate")
-    education_num: float = Field(..., example=15, alias="education-num")
+    ] = Field(..., example="Doctorate")
+    # education_num: float = Field(..., example=15, alias="education-num")
     marital_status: Literal[
         "Never-married",
         "Married-civ-spouse",
@@ -74,7 +79,7 @@ class XGBoostInput(BaseModel):
         "Separated",
         "Married-AF-spouse",
         "Widowed"
-        ] = Field(..., example="Never-married", alias="marital-status")
+    ] = Field(..., example="Never-married", alias="marital-status")
     occupation: Literal[
         "Adm-clerical",
         "Exec-managerial",
@@ -90,7 +95,7 @@ class XGBoostInput(BaseModel):
         "Protective-serv",
         "Armed-Forces",
         "Priv-house-serv"
-        ] = Field(..., example="Exec-managerial")
+    ] = Field(..., example="Exec-managerial")
     relationship: Literal[
         "Not-in-family",
         "Husband",
@@ -98,19 +103,19 @@ class XGBoostInput(BaseModel):
         "Own-child",
         "Unmarried",
         "Other-relative"
-        ] = Field(..., example="Unmarried")
+    ] = Field(..., example="Unmarried")
     race: Literal[
         "White",
         "Black",
         "Asian-Pac-Islander",
         "Amer-Indian-Eskimo",
         "Other"
-        ] = Field(..., example="Other")
+    ] = Field(..., example="Other")
     sex: Literal["Male",
-        "Female"
-        ] = Field(..., example="Male")
-    capital_gain: float = Field(..., example=293485, alias="capital-gain")
-    capital_loss: float = Field(..., example= 1, alias="capital-loss")
+                 "Female"
+    ] = Field(..., example="Male")
+    # capital_gain: float = Field(..., example=293485, alias="capital-gain")
+    # capital_loss: float = Field(..., example= 1, alias="capital-loss")
     hours_per_week: float = Field(..., example=60, alias='hours-per-week')
     native_country: Literal[
         "United-States",
@@ -154,21 +159,19 @@ class XGBoostInput(BaseModel):
         "Ireland",
         "Hungary",
         "Holand-Netherlands",
-        ] = Field(..., 'native-country')
+    ] = Field(..., example="Mexico", alias='native-country')
+    salary: Optional[str]
 
 
-class XGBOut(BaseModel):
-    """
-    TODO: ADD DOCSTRING
-    """
-    prediction: str
+
 
 
 @app.get("/")
 async def welcome():
     return {"Welcome": "Welcome to the salary XGBoost predictor web service."}
 
-@app.post("/predict", response_model=XGBOut, status_code=200)
+
+@app.post("/predict")
 async def xgb_predict(input_data: XGBoostInput):
     """
 
@@ -189,8 +192,18 @@ async def xgb_predict(input_data: XGBoostInput):
         "race",
         "sex",
         "native-country"
-        ]
+    ]
     data_input = pd.DataFrame.from_dict([input_data.dict(by_alias=True)])
+    encoding = joblib.load('model/encoder.pkl')
+    xgb_model = joblib.load('model/XBG_20220221_103639.pkl')
+    x_input, _, _, _ = data.process_data(
+        data_input,
+        categorical_features=cat_features,
+        label='salary',
+        training=False,
+        encoder=encoding,
+        lb=None
+    )
 
-
+    return {"Salary": f"{model.inference(xgb_model, x_input)[0]}"}
 

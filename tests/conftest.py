@@ -98,7 +98,7 @@ def test_xgb_pipe_(train_test_gen):
         assert len(xgb_model.predict(X_test)) > 0
         logging.info(
             "Testing train_xgb_pipe: The model delivers predictions: SUCCESS"
-            )
+        )
     except AssertionError as err:
         logging.error(
             "Testing train_xgb_pipe: The model doesn't deliver predictions: ERROR"
@@ -107,3 +107,49 @@ def test_xgb_pipe_(train_test_gen):
 
     return xgb_model, encoder, lb
 
+
+@pytest.fixture(name="negative_ex", scope='session')
+def negative_ex_():
+    """
+
+    Returns
+    -------
+
+    """
+    test_input = {
+        "age": 39,
+        "workclass": "State-gov",
+        "education": "Bachelors",
+        "marital-status": "Never-married",
+        "occupation": "Adm-clerical",
+        "relationship": "Not-in-family",
+        "race": "White",
+        "sex": "Male",
+        "hours-per-week": 40,
+        "native-country": "United-States"
+    }
+
+    return test_input
+
+
+@pytest.fixture(name="positive_ex", scope='session')
+def positive_ex_():
+    """
+
+    Returns
+    -------
+
+    """
+    test_input = {
+        "age": 40,
+        "workclass": "Private",
+        "education": "Doctorate",
+        "marital-status": "Married-civ-spouse",
+        "occupation": "Prof-specialty",
+        "relationship": "Husband",
+        "race": "White",
+        "sex": "Male",
+        "hours-per-week": 60,
+        "native-country": "United-States"
+    }
+    return test_input
