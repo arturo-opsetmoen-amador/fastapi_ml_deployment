@@ -11,11 +11,12 @@ from xgboost import XGBClassifier
 import pandas as pd
 from typing import *
 from pathlib import Path
+
+import sys
+#sys.path.insert(1, '/data')
+sys.path.insert(1, 'ml_training/')
 from ml.data import process_data
 from ml.model import get_best_params, compute_model_metrics, inference, train_xgb
-import sys
-sys.path.insert(1, '../data')
-
 
 cat_features = [
     "workclass",
@@ -87,8 +88,11 @@ def sliced_metrics(data_frame: pd.DataFrame, feature: str, model: XGBClassifier,
         slices_log.info(f"{feature} precision: {precision}")
         slices_log.info(f"{feature} recall: {recall}")
         slices_log.info(f"{feature} fbeta: {fbeta}\n")
-
-    return None
+    if precision > 0:
+        boolean = True
+    else:
+        boolean = False
+    return boolean
 
 
 def read_data(data_path: Union[str, Path]) -> pd.DataFrame:
@@ -113,8 +117,10 @@ def split_data(data_frame):
 
 
 def train_gen(train_set):
-    x_train_, y_train_, encoder_, lb_ = process_data(train_set, categorical_features=cat_features, label="salary", training=True)
-    return x_train_, y_train_, encoder_, lb_
+    x_train_, y_train_, encoder_, lab = process_data(train_set, categorical_features=cat_features, label="salary", training=True)
+    joblib.dump(encoder_, 'model/encoder.pkl')
+    joblib.dump(lab, 'model/lb.pkl')
+    return x_train_, y_train_, encoder_, lab
 
 
 def test_gen(test_set, encoder, lb):
@@ -122,11 +128,16 @@ def test_gen(test_set, encoder, lb):
     return x_test, y_test_, encoder_, lb_
 
 
-def train_xgb_pipe(X_train, y_train, X_test, y_test, num_folds=10, search=False) -> xgboost.XGBClassifier:
+def train_xgb_pipe(X_train_, y_train_, X_test_, y_test_, num_folds=10, search=False) -> xgboost.XGBClassifier:
     """
 
     Parameters
     ----------
+    X_train_
+    y_test_
+    X_test_
+    y_train_
+    y_train
     data_path
     search
     num_folds
@@ -138,12 +149,12 @@ def train_xgb_pipe(X_train, y_train, X_test, y_test, num_folds=10, search=False)
     """
     k_folds = StratifiedKFold(n_splits=num_folds, random_state=None, shuffle=False)
     if search:
-        best_params = get_best_params(X_train, y_train, k_folds)
+        best_params = get_best_params(X_train_, y_train_, k_folds)
     else:
-        best_params = joblib.load('../model/best_params_20220221_103639.pkl')
-    xgb_model = train_xgb(X_train, y_train, best_params)
-    xgb_predictions = inference(xgb_model, X_test)
-    xgb_precision, xgb_recall, xgb_fbeta = compute_model_metrics(y_test, xgb_predictions)
+        best_params = joblib.load('model/best_params_20220221_103639.pkl')
+    xgb_model = train_xgb(X_train_, y_train_, best_params)
+    xgb_predictions = inference(xgb_model, X_test_)
+    xgb_precision, xgb_recall, xgb_fbeta = compute_model_metrics(y_test_, xgb_predictions)
 
     train_log.info(f"Test xgb_Precision: {xgb_precision}")
     train_log.info(f"Test xgb_Recall: {xgb_recall}")
@@ -153,10 +164,10 @@ def train_xgb_pipe(X_train, y_train, X_test, y_test, num_folds=10, search=False)
 
 
 if __name__=="__main__":
-    data = read_data('../data/census_clean_v1.csv')
+    data = read_data('data/census_clean_v1.csv')
     train, test = split_data(data)
-    X_train, y_train, encoder, lb = train_gen(train)
-    X_test, y_test, encoder_, lb_ = test_gen(test, encoder, lb)
+    X_train, y_train, encoder_in, lb = train_gen(train)
+    X_test, y_test, encoder_test, lb_ = test_gen(test, encoder_in, lb)
     xgb_model = train_xgb_pipe(X_train, y_train, X_test, y_test)
     for feature in cat_features:
-        sliced_metrics(data, feature, xgb_model, encoder, lb)
+        sliced_metrics(data, feature, xgb_model, encoder_in, lb)

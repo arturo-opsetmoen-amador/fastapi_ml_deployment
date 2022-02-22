@@ -34,11 +34,11 @@ def logger(name: str, log_file: str, level:logging.INFO=logging.INFO) -> logging
     handler = logging.FileHandler(log_file)
     handler.setFormatter(formatter)
 
-    logger = logging.getLogger(name)
-    logger.setLevel(level)
-    logger.addHandler(handler)
+    logger_ = logging.getLogger(name)
+    logger_.setLevel(level)
+    logger_.addHandler(handler)
 
-    return logger
+    return logger_
 
 
 params_log = logger('params_log', 'params_log.txt')
@@ -101,7 +101,7 @@ def get_best_params(X_train, y_train, cv,
 
 
 def train_xgb(X_train, y_train, best_params, filepath: Union[
-    str, Path] = f'../model/XBG_{datetime.now().strftime("%Y%m%d_%H%M%S")}.pkl'):
+    str, Path] = f'model/XBG_{datetime.now().strftime("%Y%m%d_%H%M%S")}.pkl'):
     """
     Trains a machine learning model and returns it.
 
@@ -123,10 +123,7 @@ def train_xgb(X_train, y_train, best_params, filepath: Union[
                                 **best_params)
 
     xgboost.fit(X_train, y_train)
-
-    # with open(filepath, 'wb') as file:
-    #     pickle.dump(xgboost, file)
-
+    joblib.dump(xgboost, filepath)
     return xgboost
 
 
