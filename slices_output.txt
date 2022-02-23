@@ -1,0 +1,588 @@
+2022-02-21 17:43:12,359 Feature: workclass
+2022-02-21 17:43:12,360 Class: State-gov
+2022-02-21 17:43:12,360 workclass precision: 0.7436708860759493
+2022-02-21 17:43:12,360 workclass recall: 0.6831395348837209
+2022-02-21 17:43:12,360 workclass fbeta: 0.712121212121212
+
+2022-02-21 17:43:12,380 Feature: workclass
+2022-02-21 17:43:12,380 Class: Self-emp-not-inc
+2022-02-21 17:43:12,380 workclass precision: 0.6540880503144654
+2022-02-21 17:43:12,380 workclass recall: 0.4369747899159664
+2022-02-21 17:43:12,380 workclass fbeta: 0.5239294710327456
+
+2022-02-21 17:43:12,501 Feature: workclass
+2022-02-21 17:43:12,501 Class: Private
+2022-02-21 17:43:12,501 workclass precision: 0.7205609949722148
+2022-02-21 17:43:12,501 workclass recall: 0.5584495488105005
+2022-02-21 17:43:12,502 workclass fbeta: 0.6292316580011554
+
+2022-02-21 17:43:12,515 Feature: workclass
+2022-02-21 17:43:12,515 Class: Federal-gov
+2022-02-21 17:43:12,515 workclass precision: 0.7406417112299465
+2022-02-21 17:43:12,515 workclass recall: 0.7589041095890411
+2022-02-21 17:43:12,515 workclass fbeta: 0.7496617050067659
+
+2022-02-21 17:43:12,536 Feature: workclass
+2022-02-21 17:43:12,536 Class: Local-gov
+2022-02-21 17:43:12,536 workclass precision: 0.7087719298245614
+2022-02-21 17:43:12,537 workclass recall: 0.6633825944170771
+2022-02-21 17:43:12,537 workclass fbeta: 0.6853265479219677
+
+2022-02-21 17:43:12,554 Feature: workclass
+2022-02-21 17:43:12,554 Class: Self-emp-inc
+2022-02-21 17:43:12,554 workclass precision: 0.7407407407407407
+2022-02-21 17:43:12,554 workclass recall: 0.8333333333333334
+2022-02-21 17:43:12,554 workclass fbeta: 0.7843137254901961
+
+2022-02-21 17:43:12,564 Feature: workclass
+2022-02-21 17:43:12,564 Class: Without-pay
+2022-02-21 17:43:12,564 workclass precision: 1.0
+2022-02-21 17:43:12,564 workclass recall: 1.0
+2022-02-21 17:43:12,564 workclass fbeta: 1.0
+
+2022-02-21 17:43:12,597 Feature: education
+2022-02-21 17:43:12,597 Class: Bachelors
+2022-02-21 17:43:12,597 education precision: 0.7413640389725421
+2022-02-21 17:43:12,597 education recall: 0.7873941674506115
+2022-02-21 17:43:12,597 education fbeta: 0.7636861313868614
+
+2022-02-21 17:43:12,649 Feature: education
+2022-02-21 17:43:12,649 Class: HS-grad
+2022-02-21 17:43:12,649 education precision: 0.5939490445859873
+2022-02-21 17:43:12,649 education recall: 0.23067408781694496
+2022-02-21 17:43:12,650 education fbeta: 0.3322939866369711
+
+2022-02-21 17:43:12,663 Feature: education
+2022-02-21 17:43:12,663 Class: 11th
+2022-02-21 17:43:12,663 education precision: 0.4
+2022-02-21 17:43:12,663 education recall: 0.03389830508474576
+2022-02-21 17:43:12,663 education fbeta: 0.0625
+
+2022-02-21 17:43:12,681 Feature: education
+2022-02-21 17:43:12,681 Class: Masters
+2022-02-21 17:43:12,681 education precision: 0.8022892819979188
+2022-02-21 17:43:12,681 education recall: 0.8398692810457516
+2022-02-21 17:43:12,681 education fbeta: 0.8206492815327302
+
+2022-02-21 17:43:12,692 Feature: education
+2022-02-21 17:43:12,692 Class: 9th
+2022-02-21 17:43:12,692 education precision: 0.5
+2022-02-21 17:43:12,692 education recall: 0.04
+2022-02-21 17:43:12,692 education fbeta: 0.07407407407407407
+
+2022-02-21 17:43:12,730 Feature: education
+2022-02-21 17:43:12,730 Class: Some-college
+2022-02-21 17:43:12,730 education precision: 0.6395793499043977
+2022-02-21 17:43:12,730 education recall: 0.500748502994012
+2022-02-21 17:43:12,730 education fbeta: 0.561712846347607
+
+2022-02-21 17:43:12,743 Feature: education
+2022-02-21 17:43:12,743 Class: Assoc-acdm
+2022-02-21 17:43:12,743 education precision: 0.6144578313253012
+2022-02-21 17:43:12,744 education recall: 0.59765625
+2022-02-21 17:43:12,744 education fbeta: 0.6059405940594058
+
+2022-02-21 17:43:12,755 Feature: education
+2022-02-21 17:43:12,755 Class: 7th-8th
+2022-02-21 17:43:12,755 education precision: 0.0
+2022-02-21 17:43:12,755 education recall: 0.0
+2022-02-21 17:43:12,755 education fbeta: 0.0
+
+2022-02-21 17:43:12,766 Feature: education
+2022-02-21 17:43:12,766 Class: Doctorate
+2022-02-21 17:43:12,766 education precision: 0.8275862068965517
+2022-02-21 17:43:12,766 education recall: 0.8571428571428571
+2022-02-21 17:43:12,766 education fbeta: 0.8421052631578947
+
+2022-02-21 17:43:12,781 Feature: education
+2022-02-21 17:43:12,781 Class: Assoc-voc
+2022-02-21 17:43:12,781 education precision: 0.6344827586206897
+2022-02-21 17:43:12,781 education recall: 0.5348837209302325
+2022-02-21 17:43:12,781 education fbeta: 0.5804416403785488
+
+2022-02-21 17:43:12,792 Feature: education
+2022-02-21 17:43:12,792 Class: Prof-school
+2022-02-21 17:43:12,792 education precision: 0.8478747203579419
+2022-02-21 17:43:12,792 education recall: 0.9334975369458128
+2022-02-21 17:43:12,792 education fbeta: 0.8886283704572098
+
+2022-02-21 17:43:12,803 Feature: education
+2022-02-21 17:43:12,803 Class: 5th-6th
+2022-02-21 17:43:12,803 education precision: 1.0
+2022-02-21 17:43:12,803 education recall: 0.0
+2022-02-21 17:43:12,803 education fbeta: 0.0
+
+2022-02-21 17:43:12,815 Feature: education
+2022-02-21 17:43:12,815 Class: 10th
+2022-02-21 17:43:12,815 education precision: 0.25
+2022-02-21 17:43:12,815 education recall: 0.01694915254237288
+2022-02-21 17:43:12,815 education fbeta: 0.031746031746031744
+
+2022-02-21 17:43:12,824 Feature: education
+2022-02-21 17:43:12,824 Class: Preschool
+2022-02-21 17:43:12,824 education precision: 1.0
+2022-02-21 17:43:12,824 education recall: 1.0
+2022-02-21 17:43:12,824 education fbeta: 1.0
+
+2022-02-21 17:43:12,834 Feature: education
+2022-02-21 17:43:12,835 Class: 12th
+2022-02-21 17:43:12,835 education precision: 0.4
+2022-02-21 17:43:12,835 education recall: 0.06896551724137931
+2022-02-21 17:43:12,835 education fbeta: 0.1176470588235294
+
+2022-02-21 17:43:12,844 Feature: education
+2022-02-21 17:43:12,844 Class: 1st-4th
+2022-02-21 17:43:12,844 education precision: 0.4
+2022-02-21 17:43:12,844 education recall: 0.3333333333333333
+2022-02-21 17:43:12,844 education fbeta: 0.3636363636363636
+
+2022-02-21 17:43:12,900 Feature: marital-status
+2022-02-21 17:43:12,900 Class: Never-married
+2022-02-21 17:43:12,900 marital-status precision: 0.6349206349206349
+2022-02-21 17:43:12,900 marital-status recall: 0.0851063829787234
+2022-02-21 17:43:12,900 marital-status fbeta: 0.15009380863039398
+
+2022-02-21 17:43:12,986 Feature: marital-status
+2022-02-21 17:43:12,986 Class: Married-civ-spouse
+2022-02-21 17:43:12,986 marital-status precision: 0.7197045988586774
+2022-02-21 17:43:12,986 marital-status recall: 0.6701047038599781
+2022-02-21 17:43:12,986 marital-status fbeta: 0.694019584041434
+
+2022-02-21 17:43:13,014 Feature: marital-status
+2022-02-21 17:43:13,014 Class: Divorced
+2022-02-21 17:43:13,014 marital-status precision: 0.7142857142857143
+2022-02-21 17:43:13,014 marital-status recall: 0.21017699115044247
+2022-02-21 17:43:13,014 marital-status fbeta: 0.3247863247863248
+
+2022-02-21 17:43:13,026 Feature: marital-status
+2022-02-21 17:43:13,026 Class: Married-spouse-absent
+2022-02-21 17:43:13,026 marital-status precision: 0.6
+2022-02-21 17:43:13,026 marital-status recall: 0.1935483870967742
+2022-02-21 17:43:13,026 marital-status fbeta: 0.2926829268292683
+
+2022-02-21 17:43:13,039 Feature: marital-status
+2022-02-21 17:43:13,039 Class: Separated
+2022-02-21 17:43:13,040 marital-status precision: 0.8666666666666667
+2022-02-21 17:43:13,040 marital-status recall: 0.19696969696969696
+2022-02-21 17:43:13,040 marital-status fbeta: 0.32098765432098764
+
+2022-02-21 17:43:13,048 Feature: marital-status
+2022-02-21 17:43:13,048 Class: Married-AF-spouse
+2022-02-21 17:43:13,048 marital-status precision: 1.0
+2022-02-21 17:43:13,048 marital-status recall: 0.3
+2022-02-21 17:43:13,048 marital-status fbeta: 0.4615384615384615
+
+2022-02-21 17:43:13,061 Feature: marital-status
+2022-02-21 17:43:13,061 Class: Widowed
+2022-02-21 17:43:13,061 marital-status precision: 0.6666666666666666
+2022-02-21 17:43:13,061 marital-status recall: 0.075
+2022-02-21 17:43:13,061 marital-status fbeta: 0.1348314606741573
+
+2022-02-21 17:43:13,090 Feature: occupation
+2022-02-21 17:43:13,091 Class: Adm-clerical
+2022-02-21 17:43:13,091 occupation precision: 0.6755852842809364
+2022-02-21 17:43:13,091 occupation recall: 0.40562248995983935
+2022-02-21 17:43:13,091 occupation fbeta: 0.506900878293601
+
+2022-02-21 17:43:13,118 Feature: occupation
+2022-02-21 17:43:13,118 Class: Exec-managerial
+2022-02-21 17:43:13,118 occupation precision: 0.75
+2022-02-21 17:43:13,118 occupation recall: 0.8270521424883841
+2022-02-21 17:43:13,118 occupation fbeta: 0.7866437515344955
+
+2022-02-21 17:43:13,150 Feature: occupation
+2022-02-21 17:43:13,150 Class: Handlers-cleaners
+2022-02-21 17:43:13,150 occupation precision: 0.0
+2022-02-21 17:43:13,150 occupation recall: 0.0
+2022-02-21 17:43:13,150 occupation fbeta: 0.0
+
+2022-02-21 17:43:13,175 Feature: occupation
+2022-02-21 17:43:13,175 Class: Prof-specialty
+2022-02-21 17:43:13,175 occupation precision: 0.7505197505197505
+2022-02-21 17:43:13,175 occupation recall: 0.7973495306460519
+2022-02-21 17:43:13,175 occupation fbeta: 0.7732262382864793
+
+2022-02-21 17:43:13,197 Feature: occupation
+2022-02-21 17:43:13,197 Class: Other-service
+2022-02-21 17:43:13,197 occupation precision: 0.5
+2022-02-21 17:43:13,197 occupation recall: 0.007575757575757576
+2022-02-21 17:43:13,197 occupation fbeta: 0.01492537313432836
+
+2022-02-21 17:43:13,221 Feature: occupation
+2022-02-21 17:43:13,221 Class: Sales
+2022-02-21 17:43:13,221 occupation precision: 0.6768361581920904
+2022-02-21 17:43:13,221 occupation recall: 0.6175257731958763
+2022-02-21 17:43:13,221 occupation fbeta: 0.645822102425876
+
+2022-02-21 17:43:13,237 Feature: occupation
+2022-02-21 17:43:13,237 Class: Transport-moving
+2022-02-21 17:43:13,237 occupation precision: 0.5257731958762887
+2022-02-21 17:43:13,237 occupation recall: 0.15987460815047022
+2022-02-21 17:43:13,237 occupation fbeta: 0.2451923076923077
+
+2022-02-21 17:43:13,250 Feature: occupation
+2022-02-21 17:43:13,250 Class: Farming-fishing
+2022-02-21 17:43:13,250 occupation precision: 1.0
+2022-02-21 17:43:13,250 occupation recall: 0.05217391304347826
+2022-02-21 17:43:13,250 occupation fbeta: 0.09917355371900827
+
+2022-02-21 17:43:13,269 Feature: occupation
+2022-02-21 17:43:13,269 Class: Machine-op-inspct
+2022-02-21 17:43:13,269 occupation precision: 0.5172413793103449
+2022-02-21 17:43:13,269 occupation recall: 0.061224489795918366
+2022-02-21 17:43:13,270 occupation fbeta: 0.10948905109489052
+
+2022-02-21 17:43:13,283 Feature: occupation
+2022-02-21 17:43:13,283 Class: Tech-support
+2022-02-21 17:43:13,283 occupation precision: 0.6794871794871795
+2022-02-21 17:43:13,283 occupation recall: 0.762589928057554
+2022-02-21 17:43:13,283 occupation fbeta: 0.7186440677966103
+
+2022-02-21 17:43:13,308 Feature: occupation
+2022-02-21 17:43:13,308 Class: Craft-repair
+2022-02-21 17:43:13,308 occupation precision: 0.6061538461538462
+2022-02-21 17:43:13,308 occupation recall: 0.21696035242290748
+2022-02-21 17:43:13,308 occupation fbeta: 0.3195458231954582
+
+2022-02-21 17:43:13,321 Feature: occupation
+2022-02-21 17:43:13,321 Class: Protective-serv
+2022-02-21 17:43:13,321 occupation precision: 0.711764705882353
+2022-02-21 17:43:13,321 occupation recall: 0.5761904761904761
+2022-02-21 17:43:13,321 occupation fbeta: 0.6368421052631579
+
+2022-02-21 17:43:13,329 Feature: occupation
+2022-02-21 17:43:13,329 Class: Armed-Forces
+2022-02-21 17:43:13,329 occupation precision: 1.0
+2022-02-21 17:43:13,329 occupation recall: 1.0
+2022-02-21 17:43:13,329 occupation fbeta: 1.0
+
+2022-02-21 17:43:13,339 Feature: occupation
+2022-02-21 17:43:13,339 Class: Priv-house-serv
+2022-02-21 17:43:13,339 occupation precision: 0.0
+2022-02-21 17:43:13,339 occupation recall: 0.0
+2022-02-21 17:43:13,339 occupation fbeta: 0.0
+
+2022-02-21 17:43:13,380 Feature: relationship
+2022-02-21 17:43:13,380 Class: Not-in-family
+2022-02-21 17:43:13,380 relationship precision: 0.6683417085427136
+2022-02-21 17:43:13,380 relationship recall: 0.16160388821385177
+2022-02-21 17:43:13,380 relationship fbeta: 0.2602739726027397
+
+2022-02-21 17:43:13,479 Feature: relationship
+2022-02-21 17:43:13,479 Class: Husband
+2022-02-21 17:43:13,479 relationship precision: 0.7202493388741972
+2022-02-21 17:43:13,479 relationship recall: 0.6714210248283149
+2022-02-21 17:43:13,479 relationship fbeta: 0.6949785837965916
+
+2022-02-21 17:43:13,533 Feature: relationship
+2022-02-21 17:43:13,533 Class: Wife
+2022-02-21 17:43:13,543 relationship precision: 0.7201210287443268
+2022-02-21 17:43:13,543 relationship recall: 0.6858789625360231
+2022-02-21 17:43:13,543 relationship fbeta: 0.7025830258302584
+
+2022-02-21 17:43:13,609 Feature: relationship
+2022-02-21 17:43:13,609 Class: Own-child
+2022-02-21 17:43:13,609 relationship precision: 0.5
+2022-02-21 17:43:13,609 relationship recall: 0.015625
+2022-02-21 17:43:13,609 relationship fbeta: 0.030303030303030304
+
+2022-02-21 17:43:13,650 Feature: relationship
+2022-02-21 17:43:13,650 Class: Unmarried
+2022-02-21 17:43:13,650 relationship precision: 0.8064516129032258
+2022-02-21 17:43:13,650 relationship recall: 0.11737089201877934
+2022-02-21 17:43:13,650 relationship fbeta: 0.20491803278688525
+
+2022-02-21 17:43:13,676 Feature: relationship
+2022-02-21 17:43:13,677 Class: Other-relative
+2022-02-21 17:43:13,677 relationship precision: 0.75
+2022-02-21 17:43:13,677 relationship recall: 0.08571428571428572
+2022-02-21 17:43:13,677 relationship fbeta: 0.15384615384615383
+
+2022-02-21 17:43:13,842 Feature: race
+2022-02-21 17:43:13,842 Class: White
+2022-02-21 17:43:13,842 race precision: 0.7212914485165794
+2022-02-21 17:43:13,842 race recall: 0.6043281181459278
+2022-02-21 17:43:13,842 race fbeta: 0.6576497732516509
+
+2022-02-21 17:43:13,860 Feature: race
+2022-02-21 17:43:13,860 Class: Black
+2022-02-21 17:43:13,860 race precision: 0.7079646017699115
+2022-02-21 17:43:13,860 race recall: 0.4371584699453552
+2022-02-21 17:43:13,861 race fbeta: 0.5405405405405406
+
+2022-02-21 17:43:13,873 Feature: race
+2022-02-21 17:43:13,873 Class: Asian-Pac-Islander
+2022-02-21 17:43:13,873 race precision: 0.6794258373205742
+2022-02-21 17:43:13,873 race recall: 0.5725806451612904
+2022-02-21 17:43:13,873 race fbeta: 0.6214442013129103
+
+2022-02-21 17:43:13,882 Feature: race
+2022-02-21 17:43:13,882 Class: Amer-Indian-Eskimo
+2022-02-21 17:43:13,882 race precision: 0.6
+2022-02-21 17:43:13,882 race recall: 0.2647058823529412
+2022-02-21 17:43:13,882 race fbeta: 0.36734693877551017
+
+2022-02-21 17:43:13,892 Feature: race
+2022-02-21 17:43:13,892 Class: Other
+2022-02-21 17:43:13,892 race precision: 0.6363636363636364
+2022-02-21 17:43:13,892 race recall: 0.3333333333333333
+2022-02-21 17:43:13,892 race fbeta: 0.43749999999999994
+
+2022-02-21 17:43:14,008 Feature: sex
+2022-02-21 17:43:14,008 Class: Male
+2022-02-21 17:43:14,008 sex precision: 0.7186761229314421
+2022-02-21 17:43:14,008 sex recall: 0.6178861788617886
+2022-02-21 17:43:14,008 sex fbeta: 0.66448087431694
+
+2022-02-21 17:43:14,063 Feature: sex
+2022-02-21 17:43:14,063 Class: Female
+2022-02-21 17:43:14,063 sex precision: 0.7210982658959537
+2022-02-21 17:43:14,063 sex recall: 0.4487410071942446
+2022-02-21 17:43:14,063 sex fbeta: 0.5532150776053215
+
+2022-02-21 17:43:14,197 Feature: native-country
+2022-02-21 17:43:14,197 Class: United-States
+2022-02-21 17:43:14,197 native-country precision: 0.7192347466390899
+2022-02-21 17:43:14,197 native-country recall: 0.5965689778413152
+2022-02-21 17:43:14,197 native-country fbeta: 0.6521841056497616
+
+2022-02-21 17:43:14,206 Feature: native-country
+2022-02-21 17:43:14,206 Class: Cuba
+2022-02-21 17:43:14,206 native-country precision: 0.9166666666666666
+2022-02-21 17:43:14,206 native-country recall: 0.44
+2022-02-21 17:43:14,206 native-country fbeta: 0.5945945945945945
+
+2022-02-21 17:43:14,215 Feature: native-country
+2022-02-21 17:43:14,215 Class: Jamaica
+2022-02-21 17:43:14,215 native-country precision: 0.5
+2022-02-21 17:43:14,215 native-country recall: 0.3
+2022-02-21 17:43:14,215 native-country fbeta: 0.37499999999999994
+
+2022-02-21 17:43:14,224 Feature: native-country
+2022-02-21 17:43:14,224 Class: India
+2022-02-21 17:43:14,224 native-country precision: 0.6363636363636364
+2022-02-21 17:43:14,224 native-country recall: 0.7
+2022-02-21 17:43:14,224 native-country fbeta: 0.6666666666666666
+
+2022-02-21 17:43:14,237 Feature: native-country
+2022-02-21 17:43:14,237 Class: Mexico
+2022-02-21 17:43:14,237 native-country precision: 1.0
+2022-02-21 17:43:14,237 native-country recall: 0.15151515151515152
+2022-02-21 17:43:14,237 native-country fbeta: 0.2631578947368421
+
+2022-02-21 17:43:14,246 Feature: native-country
+2022-02-21 17:43:14,246 Class: Puerto-Rico
+2022-02-21 17:43:14,246 native-country precision: 0.6363636363636364
+2022-02-21 17:43:14,246 native-country recall: 0.5833333333333334
+2022-02-21 17:43:14,246 native-country fbeta: 0.6086956521739131
+
+2022-02-21 17:43:14,254 Feature: native-country
+2022-02-21 17:43:14,254 Class: Honduras
+2022-02-21 17:43:14,254 native-country precision: 1.0
+2022-02-21 17:43:14,254 native-country recall: 1.0
+2022-02-21 17:43:14,254 native-country fbeta: 1.0
+
+2022-02-21 17:43:14,263 Feature: native-country
+2022-02-21 17:43:14,263 Class: England
+2022-02-21 17:43:14,263 native-country precision: 0.75
+2022-02-21 17:43:14,263 native-country recall: 0.5
+2022-02-21 17:43:14,263 native-country fbeta: 0.6
+
+2022-02-21 17:43:14,272 Feature: native-country
+2022-02-21 17:43:14,272 Class: Canada
+2022-02-21 17:43:14,272 native-country precision: 0.7741935483870968
+2022-02-21 17:43:14,272 native-country recall: 0.6666666666666666
+2022-02-21 17:43:14,272 native-country fbeta: 0.7164179104477612
+
+2022-02-21 17:43:14,281 Feature: native-country
+2022-02-21 17:43:14,281 Class: Germany
+2022-02-21 17:43:14,281 native-country precision: 0.75
+2022-02-21 17:43:14,281 native-country recall: 0.6136363636363636
+2022-02-21 17:43:14,281 native-country fbeta: 0.6749999999999999
+
+2022-02-21 17:43:14,290 Feature: native-country
+2022-02-21 17:43:14,290 Class: Iran
+2022-02-21 17:43:14,290 native-country precision: 0.7222222222222222
+2022-02-21 17:43:14,290 native-country recall: 0.7222222222222222
+2022-02-21 17:43:14,290 native-country fbeta: 0.7222222222222222
+
+2022-02-21 17:43:14,299 Feature: native-country
+2022-02-21 17:43:14,299 Class: Philippines
+2022-02-21 17:43:14,299 native-country precision: 0.7906976744186046
+2022-02-21 17:43:14,299 native-country recall: 0.5666666666666667
+2022-02-21 17:43:14,299 native-country fbeta: 0.6601941747572816
+
+2022-02-21 17:43:14,308 Feature: native-country
+2022-02-21 17:43:14,308 Class: Poland
+2022-02-21 17:43:14,308 native-country precision: 0.5714285714285714
+2022-02-21 17:43:14,308 native-country recall: 0.36363636363636365
+2022-02-21 17:43:14,308 native-country fbeta: 0.4444444444444444
+
+2022-02-21 17:43:14,317 Feature: native-country
+2022-02-21 17:43:14,317 Class: Columbia
+2022-02-21 17:43:14,317 native-country precision: 0.4
+2022-02-21 17:43:14,317 native-country recall: 1.0
+2022-02-21 17:43:14,317 native-country fbeta: 0.5714285714285715
+
+2022-02-21 17:43:14,325 Feature: native-country
+2022-02-21 17:43:14,325 Class: Cambodia
+2022-02-21 17:43:14,325 native-country precision: 1.0
+2022-02-21 17:43:14,325 native-country recall: 0.14285714285714285
+2022-02-21 17:43:14,325 native-country fbeta: 0.25
+
+2022-02-21 17:43:14,333 Feature: native-country
+2022-02-21 17:43:14,333 Class: Thailand
+2022-02-21 17:43:14,333 native-country precision: 1.0
+2022-02-21 17:43:14,333 native-country recall: 1.0
+2022-02-21 17:43:14,333 native-country fbeta: 1.0
+
+2022-02-21 17:43:14,341 Feature: native-country
+2022-02-21 17:43:14,341 Class: Ecuador
+2022-02-21 17:43:14,341 native-country precision: 0.5
+2022-02-21 17:43:14,341 native-country recall: 0.25
+2022-02-21 17:43:14,341 native-country fbeta: 0.3333333333333333
+
+2022-02-21 17:43:14,349 Feature: native-country
+2022-02-21 17:43:14,349 Class: Laos
+2022-02-21 17:43:14,349 native-country precision: 1.0
+2022-02-21 17:43:14,349 native-country recall: 0.5
+2022-02-21 17:43:14,349 native-country fbeta: 0.6666666666666666
+
+2022-02-21 17:43:14,358 Feature: native-country
+2022-02-21 17:43:14,358 Class: Taiwan
+2022-02-21 17:43:14,358 native-country precision: 0.8421052631578947
+2022-02-21 17:43:14,358 native-country recall: 0.8421052631578947
+2022-02-21 17:43:14,358 native-country fbeta: 0.8421052631578947
+
+2022-02-21 17:43:14,366 Feature: native-country
+2022-02-21 17:43:14,366 Class: Haiti
+2022-02-21 17:43:14,366 native-country precision: 0.6666666666666666
+2022-02-21 17:43:14,366 native-country recall: 0.5
+2022-02-21 17:43:14,367 native-country fbeta: 0.5714285714285715
+
+2022-02-21 17:43:14,375 Feature: native-country
+2022-02-21 17:43:14,375 Class: Portugal
+2022-02-21 17:43:14,375 native-country precision: 1.0
+2022-02-21 17:43:14,375 native-country recall: 0.25
+2022-02-21 17:43:14,375 native-country fbeta: 0.4
+
+2022-02-21 17:43:14,384 Feature: native-country
+2022-02-21 17:43:14,384 Class: Dominican-Republic
+2022-02-21 17:43:14,384 native-country precision: 1.0
+2022-02-21 17:43:14,384 native-country recall: 0.0
+2022-02-21 17:43:14,384 native-country fbeta: 0.0
+
+2022-02-21 17:43:14,393 Feature: native-country
+2022-02-21 17:43:14,393 Class: El-Salvador
+2022-02-21 17:43:14,393 native-country precision: 1.0
+2022-02-21 17:43:14,393 native-country recall: 0.6666666666666666
+2022-02-21 17:43:14,393 native-country fbeta: 0.8
+
+2022-02-21 17:43:14,401 Feature: native-country
+2022-02-21 17:43:14,401 Class: France
+2022-02-21 17:43:14,401 native-country precision: 0.7
+2022-02-21 17:43:14,401 native-country recall: 0.5833333333333334
+2022-02-21 17:43:14,401 native-country fbeta: 0.6363636363636365
+
+2022-02-21 17:43:14,410 Feature: native-country
+2022-02-21 17:43:14,410 Class: Guatemala
+2022-02-21 17:43:14,410 native-country precision: 1.0
+2022-02-21 17:43:14,410 native-country recall: 0.3333333333333333
+2022-02-21 17:43:14,410 native-country fbeta: 0.5
+
+2022-02-21 17:43:14,419 Feature: native-country
+2022-02-21 17:43:14,419 Class: Italy
+2022-02-21 17:43:14,419 native-country precision: 0.8571428571428571
+2022-02-21 17:43:14,419 native-country recall: 0.5
+2022-02-21 17:43:14,419 native-country fbeta: 0.631578947368421
+
+2022-02-21 17:43:14,427 Feature: native-country
+2022-02-21 17:43:14,427 Class: China
+2022-02-21 17:43:14,427 native-country precision: 0.5909090909090909
+2022-02-21 17:43:14,427 native-country recall: 0.65
+2022-02-21 17:43:14,428 native-country fbeta: 0.6190476190476191
+
+2022-02-21 17:43:14,436 Feature: native-country
+2022-02-21 17:43:14,436 Class: South
+2022-02-21 17:43:14,436 native-country precision: 0.3888888888888889
+2022-02-21 17:43:14,436 native-country recall: 0.5
+2022-02-21 17:43:14,436 native-country fbeta: 0.43750000000000006
+
+2022-02-21 17:43:14,445 Feature: native-country
+2022-02-21 17:43:14,445 Class: Japan
+2022-02-21 17:43:14,445 native-country precision: 0.7368421052631579
+2022-02-21 17:43:14,445 native-country recall: 0.6086956521739131
+2022-02-21 17:43:14,445 native-country fbeta: 0.6666666666666666
+
+2022-02-21 17:43:14,456 Feature: native-country
+2022-02-21 17:43:14,456 Class: Yugoslavia
+2022-02-21 17:43:14,456 native-country precision: 0.5
+2022-02-21 17:43:14,456 native-country recall: 0.3333333333333333
+2022-02-21 17:43:14,457 native-country fbeta: 0.4
+
+2022-02-21 17:43:14,464 Feature: native-country
+2022-02-21 17:43:14,465 Class: Peru
+2022-02-21 17:43:14,465 native-country precision: 1.0
+2022-02-21 17:43:14,465 native-country recall: 0.5
+2022-02-21 17:43:14,465 native-country fbeta: 0.6666666666666666
+
+2022-02-21 17:43:14,472 Feature: native-country
+2022-02-21 17:43:14,472 Class: Outlying-US(Guam-USVI-etc)
+2022-02-21 17:43:14,473 native-country precision: 1.0
+2022-02-21 17:43:14,473 native-country recall: 1.0
+2022-02-21 17:43:14,473 native-country fbeta: 1.0
+
+2022-02-21 17:43:14,480 Feature: native-country
+2022-02-21 17:43:14,481 Class: Scotland
+2022-02-21 17:43:14,481 native-country precision: 1.0
+2022-02-21 17:43:14,481 native-country recall: 1.0
+2022-02-21 17:43:14,481 native-country fbeta: 1.0
+
+2022-02-21 17:43:14,489 Feature: native-country
+2022-02-21 17:43:14,489 Class: Trinadad&Tobago
+2022-02-21 17:43:14,489 native-country precision: 0.0
+2022-02-21 17:43:14,489 native-country recall: 0.0
+2022-02-21 17:43:14,489 native-country fbeta: 0.0
+
+2022-02-21 17:43:14,497 Feature: native-country
+2022-02-21 17:43:14,497 Class: Greece
+2022-02-21 17:43:14,497 native-country precision: 0.5555555555555556
+2022-02-21 17:43:14,497 native-country recall: 0.625
+2022-02-21 17:43:14,497 native-country fbeta: 0.5882352941176471
+
+2022-02-21 17:43:14,505 Feature: native-country
+2022-02-21 17:43:14,506 Class: Nicaragua
+2022-02-21 17:43:14,506 native-country precision: 0.0
+2022-02-21 17:43:14,506 native-country recall: 0.0
+2022-02-21 17:43:14,506 native-country fbeta: 0.0
+
+2022-02-21 17:43:14,514 Feature: native-country
+2022-02-21 17:43:14,514 Class: Vietnam
+2022-02-21 17:43:14,514 native-country precision: 0.3333333333333333
+2022-02-21 17:43:14,514 native-country recall: 0.2
+2022-02-21 17:43:14,514 native-country fbeta: 0.25
+
+2022-02-21 17:43:14,522 Feature: native-country
+2022-02-21 17:43:14,522 Class: Hong
+2022-02-21 17:43:14,522 native-country precision: 0.8
+2022-02-21 17:43:14,523 native-country recall: 0.6666666666666666
+2022-02-21 17:43:14,523 native-country fbeta: 0.7272727272727272
+
+2022-02-21 17:43:14,531 Feature: native-country
+2022-02-21 17:43:14,531 Class: Ireland
+2022-02-21 17:43:14,531 native-country precision: 1.0
+2022-02-21 17:43:14,531 native-country recall: 0.4
+2022-02-21 17:43:14,531 native-country fbeta: 0.5714285714285715
+
+2022-02-21 17:43:14,539 Feature: native-country
+2022-02-21 17:43:14,539 Class: Hungary
+2022-02-21 17:43:14,539 native-country precision: 1.0
+2022-02-21 17:43:14,539 native-country recall: 0.6666666666666666
+2022-02-21 17:43:14,539 native-country fbeta: 0.8
+
+2022-02-21 17:43:14,547 Feature: native-country
+2022-02-21 17:43:14,547 Class: Holand-Netherlands
+2022-02-21 17:43:14,547 native-country precision: 1.0
+2022-02-21 17:43:14,547 native-country recall: 1.0
+2022-02-21 17:43:14,547 native-country fbeta: 1.0
+
