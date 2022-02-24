@@ -107,7 +107,7 @@ def read_data(data_path: Union[str, Path]) -> pd.DataFrame:
 
     """
     # data = pd.read_csv("../data/census_clean_v1.csv")
-    data_frame = pd.read_csv(data_path)
+    data_frame = pd.read_csv(data_path, skipinitialspace=True)
     return data_frame
 
 
